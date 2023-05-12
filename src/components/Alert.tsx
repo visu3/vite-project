@@ -11,10 +11,10 @@ const Alert = ({ children, handleButtonClick }: Props) => {
         {children}{" "}
         <button
           type="button"
-          class="btn-close"
+          className="btn-close"
           aria-label="Close"
           data-bs-dismiss="alert"
-          //   onClick={handleButtonClick}
+          onClick={handleButtonClick}
         ></button>
       </div>
     </>
