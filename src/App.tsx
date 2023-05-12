@@ -1,10 +1,12 @@
 import ListGroup from "./Components/ListGroup";
-import * as React from "react";
 
 function App() {
+  let items = ["New York", "San Francisco", "Chicago", "Tokyo"],
+    heading = "Cities";
+
   return (
     <div>
-      <ListGroup />
+      <ListGroup items={items} heading={heading} />
     </div>
   );
 }
