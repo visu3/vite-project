@@ -2,11 +2,12 @@ import { useState } from "react";
 
 //to pass parameters to Components
 interface Props {
-  items: string[];
+  items: [];
   heading: string;
+  onSelectItem: (item: string) => void;
 }
 
-function ListGroup({ items, heading }: Props) {
+function ListGroup({ items, heading, onSelectItem }: Props) {
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
   return (
@@ -25,6 +26,7 @@ function ListGroup({ items, heading }: Props) {
             // Event handler for Click
             onClick={() => {
               setSelectedIndex(index);
+              onSelectItem(item);
             }}
           >
             {item}
