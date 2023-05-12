@@ -1,5 +1,6 @@
 import ListGroup from "./Components/ListGroup";
 import Alert from "./components/Alert";
+import Button from "./components/Button";
 
 function App() {
   let items = ["New York", "San Francisco", "Chicago", "Tokyo"],
@@ -8,6 +9,10 @@ function App() {
   let handleListGroupSelectItem = (item: string) => {
     console.log(item);
   };
+
+  let handleButtonClick = () => {
+    console.log("Button Clicked!");
+  };
   return (
     <div>
       {/* <ListGroup
@@ -15,10 +20,15 @@ function App() {
         heading={heading}
         onSelectItem={handleListGroupSelectItem}
       /> */}
-      <Alert>
+      {/* <Alert>
         Hello World <p>This is paragraph</p>
         <h3>this is H3 title in Primary color alert class</h3>
-      </Alert>
+      </Alert> */}
+      <Button
+        buttonColor="primary"
+        buttonText="Primary Btn"
+        onClick={handleButtonClick}
+      ></Button>
     </div>
   );
 }
